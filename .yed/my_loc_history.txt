@@ -1,0 +1,2 @@
+/home/imulet/.yed/build.sh 10 5
+buid.sh 1 1
