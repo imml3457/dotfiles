@@ -1,5 +1,5 @@
 
-
+#plugins-add-dir "~/.yed/plugins"
 #lang syntax
 plugin-load lang/conf
 plugin-load lang/cpp
@@ -22,10 +22,14 @@ plugin-load completer
 plugin-load shell_run
 plugin-load grep
 plugin-load vimish
-# plugin-load auto_paren
+plugin-load auto_paren
 plugin-load find_bracket
 plugin-load loc_history
 plugin-load style_picker
+plugin-load log_hl
+plugin-load calc
+plugin-load align
+
 # plugin-load rainbow
 
 vimish-bind normal "ctrl-n" buffer-next
@@ -33,10 +37,10 @@ vimish-bind normal "ctrl-d d" buffer-delete
 vimish-bind normal "ctrl-b" frame-vsplit
 vimish-bind normal "ctrl-l" frame-next
 vimish-bind normal "ctrl-k" frame-prev
+vimish-bind normal "ctrl-q" frame-delete
 vimish-bind normal "ctrl-t t" ctags-jump-to-definition
 vimish-bind normal "ctrl-c c" comment-toggle
 vimish-bind normal "M M" man-word
-vimish-bind normal "ctrl-q" reload
 vimish-bind normal "%" brace-goto-other
 vimish-bind normal "tab" go-menu
 vimish-bind normal ">" indent
@@ -50,6 +54,7 @@ vimish-bind insert "q q" cursor-right
 
 set cursor-line true
 
+vimish-bind normal "ctrl-l l" command-prompt "cursor-line "
 
 
 set truecolor true
