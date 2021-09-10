@@ -1,42 +1,20 @@
+set truecolor true
 
-
+plugin-load ypm
+#plugins-add-dir "~/.yed/plugins"
 #lang syntax
-plugin-load lang/conf
-plugin-load lang/cpp
-plugin-load lang/c
-plugin-load lang/glsl
-plugin-load lang/latex
-plugin-load lang/python
-plugin-load lang/sh
-plugin-load lang/yedrc
-plugin-load indent_c
-plugin-load man
-plugin-load ctags
-plugin-load brace_hl
-plugin-load paran_hl
-plugin-load comment
-plugin-load line_numbers
-plugin-load builder
-plugin-load find_file
-plugin-load completer
-plugin-load shell_run
-plugin-load grep
-plugin-load vimish
-# plugin-load auto_paren
-plugin-load find_bracket
-plugin-load loc_history
-plugin-load style_picker
 # plugin-load rainbow
 
 vimish-bind normal "ctrl-n" buffer-next
 vimish-bind normal "ctrl-d d" buffer-delete
 vimish-bind normal "ctrl-b" frame-vsplit
+vimish-bind normal "ctrl-p" frame-hsplit
 vimish-bind normal "ctrl-l" frame-next
 vimish-bind normal "ctrl-k" frame-prev
+vimish-bind normal "ctrl-q" frame-delete
 vimish-bind normal "ctrl-t t" ctags-jump-to-definition
 vimish-bind normal "ctrl-c c" comment-toggle
 vimish-bind normal "M M" man-word
-vimish-bind normal "ctrl-q" reload
 vimish-bind normal "%" brace-goto-other
 vimish-bind normal "tab" go-menu
 vimish-bind normal ">" indent
@@ -44,18 +22,18 @@ vimish-bind normal "<" unindent
 vimish-bind normal "spc f" find-file
 vimish-bind normal "ctrl-y" multi "builder-start" "builder-view-output" "special-buffer-prepare-unfocus *builder-output"
 vimish-bind normal "ctrl-g g" grep
-vimish-bind insert "j j" vimish-exit-insert 
+vimish-bind insert "j j" vimish-exit-insert
 vimish-bind normal "E E" builder-jump-to-error
 vimish-bind insert "q q" cursor-right
 
 set cursor-line true
 
+# set disable-auto-paren yes
+# set disable-auto-bracket yes
+# set disable-auto-dquote yes
+# set disable-auto-quote yes
 
 
-set truecolor true
-
-plugin-load style_pack
-
-style embark
+style dracula
 
 yedrc-load .yedrc
