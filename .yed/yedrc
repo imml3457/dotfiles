@@ -1,8 +1,6 @@
 set truecolor true
 
 plugin-load ypm
-#plugins-add-dir "~/.yed/plugins"
-#lang syntax
 # plugin-load rainbow
 
 vimish-bind normal "ctrl-n" buffer-next
@@ -27,11 +25,7 @@ vimish-bind normal "E E" builder-jump-to-error
 vimish-bind insert "q q" cursor-right
 
 set cursor-line true
-
-# set disable-auto-paren yes
-# set disable-auto-bracket yes
-# set disable-auto-dquote yes
-# set disable-auto-quote yes
+vimish-bind normal "ctrl-l l" command-prompt "cursor-line "
 
 
 style dracula
