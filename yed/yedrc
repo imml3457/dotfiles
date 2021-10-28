@@ -28,7 +28,7 @@ set cursor-line true
 vimish-bind normal "ctrl-l l" command-prompt "cursor-line "
 
 
-style dracula
+style crunchy_leaves
 
 # set status-line-left '%f %B'
 
