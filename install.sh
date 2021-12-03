@@ -30,13 +30,10 @@ ln -sf $DIR/.tmux.conf $HOME/.tmux.conf
 
 echo "installing yed files"
 
-if [ -d "$HOME/.config/yed" ]
-then
-    ln -sf $DIR/yed/yedrc $HOME/.config/yed/yedrc
-    ln -sf $DIR/yed/ypm_list $HOME/.config/yed/ypm_list
-else
-    echo ".config/yed does not exist"
-fi
+    ln -sf $DIR/yed $HOME/.config/yed
+    cd yed
+    ./update.sh
+    cd ../
 
 echo "installing zshrc"
 
