@@ -30,10 +30,10 @@ ln -sf $DIR/.tmux.conf $HOME/.tmux.conf
 
 echo "installing yed files"
 
-    ln -sf $DIR/yed $HOME/.config/yed
-    cd yed
-    ./update.sh
-    cd ../
+ln -sf $DIR/yed $HOME/.config/yed
+cd yed
+./update.sh
+cd ../
 
 echo "installing zshrc"
 

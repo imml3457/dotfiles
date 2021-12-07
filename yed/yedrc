@@ -28,7 +28,7 @@ set cursor-line true
 vimish-bind normal "ctrl-l l" command-prompt "cursor-line "
 
 
-style zulu
+#style zulu
 
 # set status-line-left '%f %B'
 
