@@ -25,8 +25,30 @@ vimish-bind normal "E E" builder-jump-to-error
 vimish-bind insert "q q" cursor-right
 
 set cursor-line true
+set go-menu-persistent-items "~/.config/yed/yedrc"
 vimish-bind normal "ctrl-l l" command-prompt "cursor-line "
 
+### @Mouse ###
+set mouse-cursor-scroll yes
+set mouse-scroll-num-lines "5"
+set "mouse-menu-on-word"      "Paste paste-yank-buffer                                                                            \
+                              'Jump to Definition' 'multi jump-stack-push ctags-jump-to-definition'                               \
+                               Manpage 'man-word'                                                                                 \
+                               Convert convert-number"
+
+set "mouse-menu-on-selection" "Copy yank-selection                    \
+                               Clipboard copy-to-universal-clipboard  \
+                               Delete delete-back"
+
+set "mouse-menu-on-nothing"   "Build 'multi builder-start builder-view-output \"special-buffer-prepare-unfocus *builder-output\"' \
+                              'Frame New' frame-new                                                                               \
+                              'Frame Delete' frame-delete                                                                         \
+                               Return jump-stack-pop                                                                              \
+                               Reload reload                                                                                      \
+                               H-Split frame-hsplit                                                                               \
+                               V-Split frame-vsplit                                                                               \
+                               Quit qa                                                                                            \
+                               'Save and Quit' wq"
 
 #style zulu
 
@@ -37,3 +59,12 @@ set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code
 set status-line-right '%[&code-keyword.fg]%[&code-keyword.fg &active.bg swap] %p%% %[&code-keyword.fg &active.bg swap] %l :: %c'
 
 yedrc-load .yedrc
+
+
+
+
+
+
+
+
+

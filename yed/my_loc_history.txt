@@ -1,7 +1,7 @@
 .yed 1 1
 .yedrc 1 37
 /home/imulet/.config/yed/init.c 88 38
-/home/imulet/.config/yed/yedrc 39 18
+/home/imulet/.config/yed/yedrc 49 119
 /home/imulet/.yed/yedrc 2 1
 /home/imulet/.zshrc 11 38
 /home/imulet/BTrace/.yedrc 2 37
@@ -42,10 +42,15 @@
 /home/imulet/KUtrace/patches/linux-4.19.19/kernel/softirq.c.patched 724 1
 /home/imulet/KUtrace/postprocess/postprocess.sh 20 1
 /home/imulet/KUtrace/postprocess/rawtoevent.cc 494 1
+/home/imulet/btrace/build/skel/BTrace.skel.h 26 34
+/home/imulet/btrace/src/bpf/BTrace.bpf.c 40 15
+/home/imulet/btrace/src/bpf_trace.c 174 39
+/home/imulet/btrace/trace.c 14 1
 /home/imulet/cs530_gradescripts/class_assignments/csem/assignment/src/sem.cpp 790 1
+/home/imulet/dotfiles/install.sh 6 1
 /home/imulet/dotfiles/yed/my_loc_history.txt 72 39
 /home/imulet/dotfiles/yed/yedrc 11 1
-/home/imulet/dotfiles/yed/ypm_list 45 1
+/home/imulet/dotfiles/yed/ypm_list 56 10
 /home/imulet/dotfiles/ypm_list 7 1
 /home/imulet/jmembrain/benchmarks/specjbb/run_composite.sh 18 27
 /home/imulet/jmembrain/jdk/src/hotspot/share/gc/g1/g1CollectedHeap.cpp 91 1
@@ -61,7 +66,7 @@
 /home/imulet/mat-daemon/configs/brazil_read.config 8 42
 /home/imulet/mat-daemon/runs_llc/profile.txt 11788 1
 /home/imulet/mat-daemon/runs_read_write/profile.txt 50065 94
-/home/imulet/mat-daemon/src/bpf/mat_daemon.bpf.c 88 3
+/home/imulet/mat-daemon/src/bpf/mat_daemon.bpf.c 495 1
 /home/imulet/mat-daemon/src/bpf_common.h 100 1
 /home/imulet/mat-daemon/src/bpf_map_helpers.c 184 1
 /home/imulet/mat-daemon/src/bpf_profiling.c 287 1
@@ -81,6 +86,7 @@
 /home/imulet/mat-daemon/src/threadpool.c 2 1
 /home/imulet/mat-daemon/src/threadpool.h 191 1
 /home/imulet/mat-daemon/src/x86/vmlinux.h 19 1
+/home/imulet/temp.txt 11242 8
 /home/jmcmicha/Projects/Kernels/corsys-linux-5.7.2/arch/x86/kernel/tracepoint.c 34 1
 /home/jmcmicha/Projects/Kernels/corsys-linux-5.7.2/arch/x86/kernel/x86_init.c 183 1
 /home/jmcmicha/Projects/Kernels/corsys-linux-5.7.2/lib/btree.c 385 1
