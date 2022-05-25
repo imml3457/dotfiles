@@ -51,7 +51,7 @@ set "mouse-menu-on-nothing"   "Build 'multi builder-start builder-view-output \"
                                'Save and Quit' wq"
 
 #style zulu
-fstyle /home/imulet/.config/yed/heather.fstyle
+fstyle ~/.config/yed/heather.fstyle
 # set status-line-left '%f %B'
 
 set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code-number.fg swap &code-keyword.fg]%[&code-number.fg &active.bg swap] %f %B %[&code-number]'
@@ -59,7 +59,6 @@ set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code
 set status-line-right '%[&code-keyword.fg]%[&code-keyword.fg &active.bg swap] %p%% %[&code-keyword.fg &active.bg swap] %l :: %c'
 
 yedrc-load .yedrc
-
 
 
 
