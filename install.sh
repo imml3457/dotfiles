@@ -35,6 +35,10 @@ cd yed
 ./update.sh
 cd ../
 
+
+if [[ "$1" != "--no-zshrc" ]]
+then
 echo "installing zshrc"
 
 ln -sf $DIR/.zshrc $HOME/.zshrc
+fi

@@ -55,3 +55,7 @@ mouse_menu
 yule_2021
 fstyle
 lang/syntax/make
+mouse_frame_control
+lang/syntax/diff_hl
+custom_frames
+terminal

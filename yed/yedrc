@@ -50,7 +50,17 @@ set "mouse-menu-on-nothing"   "Build 'multi builder-start builder-view-output \"
                                Quit qa                                                                                            \
                                'Save and Quit' wq"
 
-#style zulu
+set-custom-buffer-frame    "ypm-sussy" "s" 0 "v" "r" "r" 0.50 0 1 0.30 250 "*ypm-menu *calc"
+set-custom-buffer-frame    "left-tray" "s" 0 "v" "l" "r" 0.50 1 1 0.30 150 "*log"
+set-custom-buffer-frame    "man-page" "f" 1 0.0 0.0 1 1 0 "*man-page"
+set-custom-buffer-frame    "go-menu" "f" 1 0.0 0.0 0.15 0.25 0 "*go-menu"
+set-custom-buffer-frame    "tray" "s" 0 "h" "t" "r" 0.15 0 1 0.10 150 "*builder-output"
+
+
+
+
+
+#style heather
 fstyle ~/.config/yed/heather.fstyle
 # set status-line-left '%f %B'
 
@@ -59,7 +69,5 @@ set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code
 set status-line-right '%[&code-keyword.fg]%[&code-keyword.fg &active.bg swap] %p%% %[&code-keyword.fg &active.bg swap] %l :: %c'
 
 yedrc-load .yedrc
-
-
 
 
