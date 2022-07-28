@@ -28,30 +28,57 @@ for_window [app_id="foot"] opacity $opacity
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output VGA-1 bg ~/Downloads/1407669.png fill
-output DP-2 bg ~/Downloads/wallpaper2.jpg fill
-output DP-1 bg ~/Downloads/wallpaper3.png fill
+output DP-2 bg ~/Downloads/1407669.png fill
+output DP-1 bg ~/Downloads/wallpaper2.jpg fill
+output VGA-1 bg ~/Downloads/wallpaper3.png fill
 
 #
 # Example configuration:
 #
-output VGA-1 resolution 1920x1080 position 0,0
-output DP-2 resolution 1920x1080 position 1920,0
-output DP-1 resolution 1920x1080 position 3840,0
+output DP-1 resolution 1920x1080 position 1920,0
+output DP-2 resolution 1920x1080 position 0,0
+output VGA-1 resolution 1920x1080 position 3840,0
 
-workspace 1 output VGA-1
-workspace 2 output DP-2
-workspace 3 output DP-1
+workspace 3 output VGA-1
+workspace 1 output DP-2
+workspace 2 output DP-1
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+          timeout 300 'swaylock -f\
+    --screenshots \
+    --clock \
+    --indicator \
+    --indicator-radius 100 \
+    --indicator-thickness 7 \
+    --effect-blur 7x5 \
+    --effect-vignette 0.5:0.5 \
+    --ring-color bb00cc \
+    --key-hl-color 880033 \
+    --line-color 00000000 \
+    --inside-color 00000088 \
+    --separator-color 00000000 \
+    --fade-in 0.2' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          timeout 610 'systemctl suspend' \
+          before-sleep 'swaylock -f\
+                        --screenshots \
+                        --clock \
+                        --indicator \
+                        --indicator-radius 100 \
+                        --indicator-thickness 7 \
+                        --effect-blur 7x5 \
+                        --effect-vignette 0.5:0.5 \
+                        --ring-color bb00cc \
+                        --key-hl-color 880033 \
+                        --line-color 00000000 \
+                        --inside-color 00000088 \
+                        --separator-color 00000000 \
+                        --fade-in 0.2'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on:q when
@@ -70,6 +97,9 @@ workspace 3 output DP-1
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+input * repeat_rate 50
+input * repeat_delay 300
 
 ### Key bindings
 #
@@ -90,6 +120,9 @@ workspace 3 output DP-1
     --inside-color 00000088 \
     --separator-color 00000000 \
     --fade-in 0.2'
+
+
+    bindsym $mod+Shift+r exec 'grim -g "$(slurp)" screenshot.png'
 
     # Start a terminal
     bindsym $mod+Return exec $term

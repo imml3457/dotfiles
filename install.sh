@@ -1,9 +1,20 @@
 #! /usr/bin/env bash
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+yed_dir=$HOME/.config/yed
 
+CMD_ARRAY=("--help" "--install-zsh" "--no_zshrc")
 
-if [[ "$1" == "--install-zsh" ]]
+if [[ "$1" == ${CMD_ARRAY[0]} ]]
+then
+    for i in ${CMD_ARRAY[@]}
+    do
+        printf "COMMAND: %s\n" $i
+    done
+    exit 1
+fi
+
+if [[ "$1" == ${CMD_ARRAY[1]} ]]
 then
     echo "installing zsh"
 
@@ -28,17 +39,17 @@ echo "installing tmux config"
 
 ln -sf $DIR/.tmux.conf $HOME/.tmux.conf
 
-echo "installing yed files"
-
-ln -sf $DIR/yed $HOME/.config/yed
-cd yed
-./update.sh
-cd ../
-
-
-if [[ "$1" != "--no-zshrc" ]]
+if [ ! -L "$yed_dir" ]
 then
-echo "installing zshrc"
+    echo "installing yed files"
+    ln -sf $DIR/yed $HOME/.config/yed
+    cd yed
+    ./update.sh
+    cd ../
+fi
 
-ln -sf $DIR/.zshrc $HOME/.zshrc
+if [[ "$1" != ${CMD_ARRAY[2]} ]]
+then
+    echo "installing zshrc"
+    ln -sf $DIR/.zshrc $HOME/.zshrc
 fi
