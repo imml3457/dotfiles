@@ -61,7 +61,7 @@ set-custom-buffer-frame    "tray" "s" 0 "h" "t" "r" 0.15 0 1 0.10 150 "*builder-
 
 
 #style heather
-fstyle ~/.config/yed/heather.fstyle
+fstyle ~/.config/yed/pastel.fstyle
 # set status-line-left '%f %B'
 
 set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code-number.fg swap &code-keyword.fg]%[&code-number.fg &active.bg swap] %f %B %[&code-number]'
@@ -69,5 +69,3 @@ set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code
 set status-line-right '%[&code-keyword.fg]%[&code-keyword.fg &active.bg swap] %p%% %[&code-keyword.fg &active.bg swap] %l :: %c'
 
 yedrc-load .yedrc
-
-

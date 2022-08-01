@@ -1,0 +1,25 @@
+
+           active               fg BDBBB0    bg 292929
+           active-border        fg BDBBB0    bg 292929
+           active-gutter        fg BDBBB0    bg 292929
+           inactive             fg BDBBB0    bg 0A0A0A
+           inactive-border      fg BDBBB0    bg 0A0A0A
+           inactive-gutter      fg BDBBB0    bg 0A0A0A
+           cursor-line          fg BDBBB0    bg 494646
+           selection            fg BDBBB0    bg 494646
+           search               fg bb77aa    bg 170326    inverse
+           search-cursor        fg 05668d    bg 170326    inverse
+           attention            fg AF0000                 bold
+           associate            fg fff3f0    bg 885a5a
+           status-line          fg 252730    bg f6bd60    bold
+           command-line         fg BDBBB0    bg 151414
+           code-comment         fg 7d808c                 bold
+           code-keyword         fg 345995
+           code-control-flow    fg 84a59d
+           code-typename        fg af4d98
+           code-preprocessor    fg af4d98                 bold
+           code-fn-call         fg f28482
+           code-number          fg f6bd60
+           code-constant        fg f6bd60                 bold
+           code-string          fg 84a59d
+           code-character       fg 84a59d
