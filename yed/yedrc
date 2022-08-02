@@ -18,11 +18,11 @@ vimish-bind normal "tab" go-menu
 vimish-bind normal ">" indent
 vimish-bind normal "<" unindent
 vimish-bind normal "spc f" find-file
-vimish-bind normal "ctrl-y" multi "builder-start" "builder-view-output" "special-buffer-prepare-unfocus *builder-output"
+vimish-bind normal "ctrl-y" multi "builder-start" "builder-view-output"
 vimish-bind normal "ctrl-g g" grep
 vimish-bind insert "j j" vimish-exit-insert
 vimish-bind normal "E E" builder-jump-to-error
-vimish-bind insert "q q" cursor-right
+vimish-bind normal "ctrl-u u" tree-view
 
 set cursor-line true
 set go-menu-persistent-items "~/.config/yed/yedrc"
@@ -53,8 +53,8 @@ set "mouse-menu-on-nothing"   "Build 'multi builder-start builder-view-output \"
 set-custom-buffer-frame    "ypm-sussy" "s" 0 "v" "r" "r" 0.50 0 1 0.30 250 "*ypm-menu *calc"
 set-custom-buffer-frame    "left-tray" "s" 0 "v" "l" "r" 0.50 1 1 0.30 150 "*log"
 set-custom-buffer-frame    "man-page" "f" 1 0.0 0.0 1 1 0 "*man-page"
-set-custom-buffer-frame    "go-menu" "f" 1 0.0 0.0 0.15 0.25 0 "*go-menu"
-set-custom-buffer-frame    "tray" "s" 0 "h" "t" "r" 0.15 0 1 0.10 150 "*builder-output"
+set-custom-buffer-frame    "go-menu" "f" 1 0.0 0.0 0.15 0.25 0 "*go-menu *tree-view-list"
+set-custom-buffer-frame    "tray" "s" 1 "h" "t" "r" 0.15 0 1 0.10 150 "*builder-output"
 
 
 
