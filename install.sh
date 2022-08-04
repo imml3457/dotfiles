@@ -3,7 +3,7 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 yed_dir=$HOME/.config/yed
 
-CMD_ARRAY=("--help" "--install-zsh" "--no_zshrc")
+CMD_ARRAY=("--help" "--install-zsh" "--no_zshrc" "--force")
 
 if [[ "$1" == ${CMD_ARRAY[0]} ]]
 then
@@ -42,6 +42,14 @@ ln -sf $DIR/.tmux.conf $HOME/.tmux.conf
 if [ ! -L "$yed_dir" ]
 then
     echo "installing yed files"
+    ln -sf $DIR/yed $HOME/.config/yed
+    cd yed
+    ./update.sh
+    cd ../
+elif [[ "$1" == ${CMD_ARRAY[3]} ]]
+then
+    echo "reinstalling yed"
+    rm -rf $HOME/.config/yed
     ln -sf $DIR/yed $HOME/.config/yed
     cd yed
     ./update.sh

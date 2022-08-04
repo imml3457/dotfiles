@@ -5,7 +5,7 @@ plugin-load ypm
 
 vimish-bind normal "ctrl-n" buffer-next
 vimish-bind normal "ctrl-d d" buffer-delete
-vimish-bind normal "ctrl-b" frame-vsplit
+vimish-bind normal "ctrl-v" frame-vsplit
 vimish-bind normal "ctrl-p" frame-hsplit
 vimish-bind normal "ctrl-l" frame-next
 vimish-bind normal "ctrl-k" frame-prev
@@ -13,7 +13,7 @@ vimish-bind normal "ctrl-q" frame-delete
 vimish-bind normal "ctrl-t t" ctags-jump-to-definition
 vimish-bind normal "ctrl-c c" comment-toggle
 vimish-bind normal "M M" man-word
-vimish-bind normal "%" brace-goto-other
+# vimish-bind normal "%" brace-goto-other
 vimish-bind normal "tab" go-menu
 vimish-bind normal ">" indent
 vimish-bind normal "<" unindent
@@ -22,7 +22,18 @@ vimish-bind normal "ctrl-y" multi "builder-start" "builder-view-output"
 vimish-bind normal "ctrl-g g" grep
 vimish-bind insert "j j" vimish-exit-insert
 vimish-bind normal "E E" builder-jump-to-error
-vimish-bind normal "ctrl-u u" tree-view
+vimish-bind normal "ctrl-i i" tree-view
+vimish-bind normal "ctrl-b %" multi frame-vsplit term-open-no-frame
+vimish-bind normal 'ctrl-b "' multi frame-hsplit term-open-no-frame
+
+term-bind "ctrl-b %" multi frame-vsplit term-open-no-frame
+term-bind 'ctrl-b "' multi frame-hsplit term-open-no-frame
+
+term-unbind "ctrl-t"
+term-bind "ctrl-u" toggle-term-mode
+vimish-bind normal "ctrl-u" toggle-term-mode
+
+# set terminal-auto-term-mode no
 
 set cursor-line true
 set go-menu-persistent-items "~/.config/yed/yedrc"
