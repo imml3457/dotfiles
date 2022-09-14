@@ -64,7 +64,6 @@ exec swayidle -w \
     --separator-color 00000000 \
     --fade-in 0.2' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          timeout 610 'systemctl suspend' \
           before-sleep 'swaylock -f\
                         --screenshots \
                         --clock \

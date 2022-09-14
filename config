@@ -1,0 +1,17 @@
+Host brazil
+    User imulet
+    Hostname brazil.eecs.utk.edu
+
+Host hydra
+    User imulet
+    Hostname hydra7.eecs.utk.edu
+
+Host da2
+    hostname da2.eecs.utk.edu
+    port 7788
+    user imulet
+    LocalForward 8888 127.0.0.1:8888
+
+Host com
+    hostname com1696.eecs.utk.edu
+    user imulet

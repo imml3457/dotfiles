@@ -39,6 +39,10 @@ echo "installing tmux config"
 
 ln -sf $DIR/.tmux.conf $HOME/.tmux.conf
 
+echo "installing ssh config"
+
+ln -sf $DIR/config $HOME/.ssh/config
+
 if [ ! -L "$yed_dir" ]
 then
     echo "installing yed files"
