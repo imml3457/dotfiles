@@ -117,4 +117,5 @@ export PATH=~/.local/bin:$PATH
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-alias pacaur=pacaur --noedit
+alias pacaur="pacaur --noedit"
+alias open="xdg-open"

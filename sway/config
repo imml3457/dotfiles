@@ -28,9 +28,9 @@ for_window [app_id="foot"] opacity $opacity
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output DP-2 bg ~/Downloads/1407669.png fill
-output DP-1 bg ~/Downloads/wallpaper2.jpg fill
-output VGA-1 bg ~/Downloads/wallpaper3.png fill
+output DP-2 bg ~/wallpaper_imgs/1407669.png fill
+output DP-1 bg ~/wallpaper_imgs/wallpaper2.png fill
+output VGA-1 bg ~/wallpaper_imgs/wallpaper3.png fill
 
 #
 # Example configuration:

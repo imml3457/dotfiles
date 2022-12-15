@@ -5,7 +5,7 @@ plugin-load ypm
 
 vimish-bind normal "ctrl-n" buffer-next
 vimish-bind normal "ctrl-d d" buffer-delete
-vimish-bind normal "ctrl-v" frame-vsplit
+vimish-bind normal "ctrl-v ctrl-v" frame-vsplit
 vimish-bind normal "ctrl-p" frame-hsplit
 vimish-bind normal "ctrl-l" frame-next
 vimish-bind normal "ctrl-k" frame-prev
