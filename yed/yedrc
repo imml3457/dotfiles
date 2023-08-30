@@ -28,7 +28,6 @@ vimish-bind normal 'ctrl-b "' multi frame-hsplit term-open-no-frame
 
 term-bind "ctrl-b %" multi frame-vsplit term-open-no-frame
 term-bind 'ctrl-b "' multi frame-hsplit term-open-no-frame
-
 term-unbind "ctrl-t"
 term-bind "ctrl-u" toggle-term-mode
 vimish-bind normal "ctrl-u" toggle-term-mode
@@ -73,10 +72,30 @@ set-custom-buffer-frame    "tray" "s" 1 "h" "t" "r" 0.15 0 1 0.10 150 "*builder-
 
 #style heather
 fstyle ~/.config/yed/pastel.fstyle
+fstyle ~/.config/yed/styles/cubic.fstyle
+fstyle ~/.config/yed/styles/old.fstyle
+fstyle ~/.config/yed/styles/byte.fstyle
+fstyle ~/.config/yed/styles/holly.fstyle
+fstyle ~/.config/yed/styles/aerostar.fstyle
+fstyle ~/.config/yed/styles/slate.fstyle
+fstyle ~/.config/yed/styles/alchemist.fstyle
+fstyle ~/.config/yed/styles/hydropump.fstyle
+fstyle ~/.config/yed/styles/doug.fstyle
+fstyle ~/.config/yed/styles/squire.fstyle
+fstyle ~/.config/yed/styles/squire_blue.fstyle
+fstyle ~/.config/yed/styles/gpt1.fstyle
+fstyle ~/.config/yed/styles/gpt2.fstyle
+fstyle ~/.config/yed/styles/gpt3.fstyle
+fstyle ~/.config/yed/styles/gpt4.fstyle
+fstyle ~/.config/yed/styles/gpt5.fstyle
+fstyle ~/.config/yed/styles/jon.fstyle
+fstyle ~/.config/yed/styles/skyfall.fstyle
 # set status-line-left '%f %B'
 
 set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code-number.fg swap &code-keyword.fg]%[&code-number.fg &active.bg swap] %f %B %[&code-number]'
 
 set status-line-right '%[&code-keyword.fg]%[&code-keyword.fg &active.bg swap] %p%% %[&code-keyword.fg &active.bg swap] %l :: %c'
+
+set completer-sources "word tags"
 
 yedrc-load .yedrc

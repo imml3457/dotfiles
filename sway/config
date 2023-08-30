@@ -9,19 +9,40 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left j
-set $down k
-set $up l
-# set $right ";"
+set $left h
+set $down j
+set $up k
+set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
+
+
+# general settings
+
+# gaps
+gaps inner 11
+gaps outer 0
+#hide mouse on inactivity
+seat * hide_cursor 10000
+
+#colors
+
+# client.focused        #ff6e67 #ff6e67 #ff6e67 #ffc1bd #ff6e67
+# client.focused          #bababa #bababa #bababa #dadada #bababa
+# client.unfocused    #b8b8b8 #b8b8b8 #b8b8b8 #b8b8b8 #b8b8b8
+# client.focused_inactive    #b8b8b8 #b8b8b8 #b8b8b8 #b8b8b8 #b8b8b8
+
+#client.unfocused    #262626 #262626 #262626 #262626 #262626
+#client.focused_inactive    #262626 #262626 #262626 #262626 #262626
+
+
+
+
 set $menu rofi -show drun | xargs swaymsg exec --
-
-gaps inner 10
-
+exec wlsunset -l 35.96064 -L -83.92074
 set $opacity 0.8
 for_window [app_id="foot"] opacity $opacity
 
@@ -121,8 +142,8 @@ input * repeat_delay 300
     --fade-in 0.2'
 
 
-    bindsym $mod+Shift+r exec 'grim -g "$(slurp)" screenshot.png'
-
+    bindsym $mod+Shift+r exec 'grim -g "$(slurp)" ~/Pictures/$(date +"%s_grim.png")'
+    bindsym $mod+Shift+t exec grim -g "$(slurp -d)" - | wl-copy
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -151,7 +172,7 @@ input * repeat_delay 300
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
-    bindsym $mod+Semicolon focus right
+    bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -261,18 +282,20 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position bottom
+# bar {
+#     position bottom
+#
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+#
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+exec waybar
 
 include /etc/sway/config.d/*

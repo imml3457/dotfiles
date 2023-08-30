@@ -15,3 +15,7 @@ Host da2
 Host com
     hostname com1696.eecs.utk.edu
     user imulet
+
+Host chile
+    hostname chile.eecs.utk.edu
+    user imulet
