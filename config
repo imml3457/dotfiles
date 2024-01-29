@@ -19,3 +19,11 @@ Host com
 Host chile
     hostname chile.eecs.utk.edu
     user imulet
+
+Host com42
+    hostname com1642.eecs.utk.edu
+    user imulet
+
+Host com2090
+    hostname com2090.eecs.utk.edu
+    user imulet

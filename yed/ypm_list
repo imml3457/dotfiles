@@ -60,3 +60,5 @@ lang/syntax/diff_hl
 custom_frames
 tree_view
 terminal
+lang/simon
+lang/syntax/simon

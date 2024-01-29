@@ -142,7 +142,7 @@ input * repeat_delay 300
     --fade-in 0.2'
 
 
-    bindsym $mod+Shift+r exec 'grim -g "$(slurp)" ~/Pictures/$(date +"%s_grim.png")'
+    bindsym $mod+Shift+r exec 'grim -g "$(slurp)" $(xdg-user-dir PICTURES)/grim_$(date +"%Y%m%d%H%M%S").png'
     bindsym $mod+Shift+t exec grim -g "$(slurp -d)" - | wl-copy
     # Start a terminal
     bindsym $mod+Return exec $term

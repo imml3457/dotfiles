@@ -92,6 +92,8 @@ fstyle ~/.config/yed/styles/jon.fstyle
 fstyle ~/.config/yed/styles/skyfall.fstyle
 # set status-line-left '%f %B'
 
+style hydropump
+
 set status-line-left '%[&code-keyword.fg &active.bg swap] %(vimish-mode) %[&code-number.fg swap &code-keyword.fg]%[&code-number.fg &active.bg swap] %f %B %[&code-number]'
 
 set status-line-right '%[&code-keyword.fg]%[&code-keyword.fg &active.bg swap] %p%% %[&code-keyword.fg &active.bg swap] %l :: %c'
